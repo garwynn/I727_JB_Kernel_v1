@@ -2,7 +2,7 @@
 
 export	pwd=`readlink -f .`
 echo "making ramdisk"
-./mkbootfs ramdisk-l900-tw | gzip > ramdisk.gz
+./mkbootfs ramdisk-i727-tw | gzip > ramdisk.gz
 
 echo "making boot.img"
 # packs the ramdisk together with the zImage at the proper locations and makes the boot.img
