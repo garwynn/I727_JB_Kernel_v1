@@ -28,12 +28,12 @@ export LC_ALL
 
 if [ -z "$KBUILD_BUILD_VERSION" ]; then
 	if [ -r .version ]; then
-		VERSION=I727_JB_v0.0.1
+		VERSION=I727_JB_v0.1.0
 	else
-		VERSION=I727_JB_v0.0.1
+		VERSION=I727_JB_v0.1.0
 	fi
 else
-	VERSION=I727_JB_v0.0.1
+	VERSION=I727_JB_v0.1.0
 fi
 
 if [ -z "$KBUILD_BUILD_TIMESTAMP" ]; then
