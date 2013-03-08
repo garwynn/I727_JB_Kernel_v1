@@ -1,0 +1,16 @@
+#!/bin/bash
+
+Loc=~/.gnome2/nautilus-scripts/SignScripts/
+
+for arg
+do
+
+
+
+filename=${arg%.*}
+ext=${arg#*.}
+
+java -classpath "$Loc"testsign.jar testsign "$arg" "$filename"-signed.$ext
+gdialog --title "signapk" --msgbox ""$filename"-signed.$ext created" 200 200
+
+done

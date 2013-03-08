@@ -1,0 +1,19 @@
+#!/bin/bash
+
+Loc=~/.gnome2/nautilus-scripts/SignScripts/
+DATE=$(date +%Y%m%d-%H:%M:%S)
+for arg
+do
+
+cd $arg
+zip -r ../$arg.zip ./
+cd ..
+
+
+java -classpath "$Loc"testsign.jar testsign "$arg.zip" "$arg"-"$DATE"-signed.zip
+
+rm $arg.zip
+
+gdialog --title "signapk" --msgbox ""$arg"-signed.zip created" 200 200
+
+done
